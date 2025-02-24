@@ -26,3 +26,10 @@ This repository provides a model-agnostic framework for building an intelligent 
 - **Integration with CRM Systems**: Connect with popular customer relationship management tools for seamless support.
 - **Voice and Speech Processing**: Support for voice-based queries and responses.
 
+
+# Demo
+Clone the repository and then run the following:
+```
+cd src
+uvicorn main_tmp1:app --host 0.0.0.0 --port 8000 --reload
+```
