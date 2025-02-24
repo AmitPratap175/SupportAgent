@@ -130,3 +130,59 @@ def create_graph():
     app = workflow.compile()
 
     return app
+
+
+# Define CSS and Theme
+CSS = """
+/* Make the chat display area bigger */
+#chatbot {
+    height: 800px !important;
+    overflow-y: auto;
+}
+
+/* Style bot messages (left-aligned) */
+.chatbot .message-bot {
+    text-align: left;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* Style user messages (right-aligned) */
+.chatbot .message-user {
+    text-align: right;
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+/* Hide avatars completely */
+.chatbot .avatar {
+    display: none !important;
+}
+
+/* Reduce text input height */
+.textbox {
+    height: 40px !important;
+}
+"""
+
+
+
+
+def add_text(chat_history, user_input):
+    """Update chatbot history with user input."""
+    if user_input.strip() == "":
+        return chat_history, ""
+
+    # Append user message with None for bot response placeholder
+    chat_history.append((user_input, None))
+    return chat_history, ""
+
+
