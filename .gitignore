@@ -3,3 +3,4 @@
 .env.local
 .env.*  # Ignores any other .env-related files
 customer*
+.gradio
